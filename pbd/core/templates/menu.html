@@ -1,0 +1,133 @@
+<div id="sidebar-left" class="col-xs-2 col-sm-2">
+    <ul class="nav main-menu">
+        <!--<li>
+            <a href="ajax/dashboard.html" class="active">
+                <i class="fa fa-dashboard"></i>
+                <span class="hidden-xs">Dashboard</span>
+            </a>
+        </li>-->
+        {% if user.is_staff %}
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                <i class="fa fa-bar-chart-o"></i>
+                <span class="hidden-xs">Funcionário</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href={% url "funcionario:cadastrar" %}>Cadastar</a></li>
+                <li><a href={% url "funcionario:listar" %}>Listar</a></li>
+            </ul>
+        </li>
+        {% endif %}
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                <i class="fa fa-table"></i>
+                 <span class="hidden-xs">Cliente</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href={% url "cliente:cadastrar" %}>Cadastrar</a></li>
+                <li><a href={% url "cliente:listar" %}>Listar</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                <i class="fa fa-table"></i>
+                 <span class="hidden-xs">Contrato</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href={% url "contrato:cadastrar" %}>Cadastrar</a></li>
+                <!--<li><a class="ajax-link" href="ajax/tables_datatables.html">Data Tables</a></li>
+                <li><a class="ajax-link" href="ajax/tables_beauty.html">Beauty Tables</a></li>-->
+            </ul>
+        </li>
+
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                <i class="fa fa-table"></i>
+                 <span class="hidden-xs">Manutenção</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href={% url "manutencao:cadastrar" %}>Cadastrar</a></li>
+                <!--<li><a class="ajax-link" href="ajax/tables_datatables.html">Data Tables</a></li>
+                <li><a class="ajax-link" href="ajax/tables_beauty.html">Beauty Tables</a></li>-->
+            </ul>
+        </li>
+
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                <i class="fa fa-table"></i>
+                 <span class="hidden-xs">Produto</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href={% url "produto:cadastrar" %}>Cadastrar</a></li>
+                <!--<li><a class="ajax-link" href="ajax/tables_datatables.html">Data Tables</a></li>
+                <li><a class="ajax-link" href="ajax/tables_beauty.html">Beauty Tables</a></li>-->
+            </ul>
+        </li>
+
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                <i class="fa fa-picture-o"></i>
+                 <span class="hidden-xs">Multilevel menu</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">First level menu</a></li>
+                <li><a href="#">First level menu</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="fa fa-plus-square"></i>
+                        <span class="hidden-xs">Second level menu group</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Second level menu</a></li>
+                        <li><a href="#">Second level menu</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="fa fa-plus-square"></i>
+                                <span class="hidden-xs">Three level menu group</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Three level menu</a></li>
+                                <li><a href="#">Three level menu</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle">
+                                        <i class="fa fa-plus-square"></i>
+                                        <span class="hidden-xs">Four level menu group</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Four level menu</a></li>
+                                        <li><a href="#">Four level menu</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle">
+                                                <i class="fa fa-plus-square"></i>
+                                                <span class="hidden-xs">Five level menu group</span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Five level menu</a></li>
+                                                <li><a href="#">Five level menu</a></li>
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle">
+                                                        <i class="fa fa-plus-square"></i>
+                                                        <span class="hidden-xs">Six level menu group</span>
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">Six level menu</a></li>
+                                                        <li><a href="#">Six level menu</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Three level menu</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

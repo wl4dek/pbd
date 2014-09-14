@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+<section class="box-content">
+{% if objetos %}
+    {% for objeto in objetos %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">
+                        <!-- <span class="inf">
+                            ffff
+                        </span> -->
+                        <span class="inf">
+                            Nome: {{objeto}}
+                        </span>
+
+                        <div class="pull-right box-tools">
+                            <a href="{% url 'cliente:editar' objeto.pk %}" class="btn btn-primary">
+                                <i class="fa fa-cogs"></i> &nbsp;
+                                    {% trans "Editar" %}
+                            </a>
+                        </div>
+
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor%}
+{% else%}
+        <h2 class="text-center">{% trans " Esta vazio! " %}</h2>
+{% endif %}
+</section>
+{% endblock content %}
